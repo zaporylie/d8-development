@@ -10,11 +10,9 @@ Use this repo to create your own Drupal Development Environmet.
 
 # Next steps:
 
-- login to vagrant with 
-    vagrant ssh
+- login to vagrant with 'vagrant ssh'
 - go to /drupal to work on drupal folder
-- use 
-    drush <command>
+- use 'drush <command>'
 - your site is available under localhost:8888 
 - enjoy!
 
