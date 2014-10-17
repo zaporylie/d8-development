@@ -1,0 +1,7 @@
+.DS_Store
+vagrant/.vagrant
+drupal/drupal
+drupal/patches/*
+!drupal/patches/README.md
+.idea/workspace.xml
+.idea/dictionaries

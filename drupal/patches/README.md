@@ -1,0 +1,1 @@
+Keep your patches here. Patches won't be stored in repository.

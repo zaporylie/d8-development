@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Behat">
+    <behat_settings>
+      <BehatSettings behat_path="$PROJECT_DIR$" />
+    </behat_settings>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings load_method="PHPUNIT_PHAR" bootstrap_file_path="$PROJECT_DIR$/drupal/drupal/core/tests/bootstrap.php" custom_loader_path="" phpunit_phar_path="$PROJECT_DIR$/../../phpunit.phar" />
+      <phpunit_by_interpreter interpreter_id="1d64d945-ae0b-4abf-a51c-d43e39718ab7" interpreter_name="Remote PHP 5.5" load_method="PHPUNIT_PHAR" bootstrap_file_path="/drupal/core/tests/bootstrap.php" custom_loader_path="" phpunit_phar_path="/vagrant/phpunit.phar" use_bootstrap_file="true" />
+    </phpunit_settings>
+  </component>
+</project>
+

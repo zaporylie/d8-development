@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64"
+  config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.network :forwarded_port, guest: 80, host: 8888
+  config.vm.network :forwarded_port, guest: 3306, host: 3388
+  config.vm.network :forwarded_port, guest: 8080, host: 8088
+  config.vm.network :forwarded_port, guest: 22, host: 2888
+
+  config.vm.synced_folder "../drupal/drupal", "/drupal", id: "drupal-folder",
+    owner: 'vagrant',
+    group: 'www-data',
+    mount_options: ["dmode=775,fmode=664"]
+
+  config.vm.synced_folder "../", "/project", id: "project-folder",
+    owner: 'vagrant',
+    group: 'www-data',
+    mount_options: ["dmode=775,fmode=664"]
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
+
+  config.vm.network :private_network, ip: "127.0.0.1"
+  config.vm.hostname = "drupal-8.loc"
+end
