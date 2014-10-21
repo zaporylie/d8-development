@@ -64,9 +64,9 @@ if [ ! -d "/opt/provisioned" ]; then
 
   # Download drush
   /usr/local/bin/composer global require drush/drush:dev-master
-  chown vagrant /home/vagrant/.composer* -R
+  chown vagrant /home/vagrant/* -R
 
   # Install drupal
   cd /drupal
-  $HOME/.composer/vendor/bin/drush si --db-url=mysql://drupal:drupal@localhost/drupal --db-su=root --db-su-pw=vagrant
+  $HOME/.composer/vendor/bin/drush si --db-url=mysql://drupal:drupal@localhost/drupal --db-su=root --db-su-pw=vagrant -y
 fi
