@@ -1,7 +1,9 @@
-Drupal 8 development
+~~Drupal 8 development~~
 ===============
 
-Use this repo to create your own Drupal Development Environmet.
+**Project has been deprecated. Use [drupal-boilerplate](https://github.com/zaporylie/drupal-boilerplate) instead.**
+
+~~Use this repo to create your own Drupal Development Environmet.~~
 
 # Instalation
 
